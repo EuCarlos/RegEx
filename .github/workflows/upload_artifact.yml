@@ -1,0 +1,34 @@
+name: Documentação
+
+on:
+  push:
+    branches: [ main ]
+
+env:
+  FILE_NAME: ebook-regex
+
+jobs:
+  convert_via_pandoc:
+    runs-on: ubuntu-18.04    
+    steps:      
+      - uses: actions/checkout@v2    
+
+      - name: Criar diretorio output
+        run: |
+          mkdir output  # create output dir          
+      
+      - name: Criar PDF
+        uses: docker://pandoc/latex:2.10
+        with:
+          args: --pdf-engine=xelatex --output=output/${{env.FILE_NAME}}.pdf ver_mais.md
+
+      - name: Criar epub
+        uses: docker://pandoc/latex:2.10
+        with:
+          args: --output=output/${{env.FILE_NAME}}.epub ver_mais.md
+      
+      - name: Upload
+        uses: actions/upload-artifact@master
+        with:
+          name: output
+          path: output

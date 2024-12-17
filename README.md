@@ -42,7 +42,7 @@ RegEx ou Expressões Regulares é um recurso que possibilita trabalhar com padr�
 - [RegEx Pal](https://www.regexpal.com/): Ferramenta para testar as expressões regulares online.
 - [RegEx 101](https://regex101.com/): Outra ferramenta para testar as Expressões regulares online.
 - [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner): Plugin para testes no VSCode, multiplas linguagens.
-- [Unicode Table](https://unicode-table.com/pt/): Tabela de caracteres Unicode
+- [Unicode Table](https://symbl.cc/pt/): Tabela de caracteres Unicode
 
 ### Flags
 OBS.: Descrição do que são Flags
